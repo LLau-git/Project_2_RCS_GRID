@@ -42,10 +42,9 @@ html{
     /* grid-template-columns: repeat(7, 1fr); */
     grid-template-columns: 1fr;
     width: 100%;
-    /* max-width: 320px; */
     margin: 0 auto;
     min-width: 320px;
-    /* max-width: 414px; */
+    max-width: 414px;
     font-size: 1em;
     min-height: 300px;
     grid-gap: 1em;
@@ -254,10 +253,10 @@ button:hover{
     .wrapper{
         grid-template-columns: auto;
         width: 100%;
-        margin: auto;
-        /* min-height: 300px; */
+        margin: 0 auto;
+        min-width: 768px;
+        max-width: 1024px;
         grid-gap: 0.5em;
-        /* grid-auto-rows: minmax(100px, auto); */
         grid-template-rows: auto auto auto 100px 50px;
         grid-template-areas: 
         "header"
@@ -334,23 +333,12 @@ button:hover{
 /* Extra Large devices (desktops, 992px and up) */
 @media (min-width: 1200px) { 
 
-    .body2{
-        display: none;
-    }
-    .advert{
-        grid-area: advert;
-    }
-    .advert{
-        display: contents;
-        display: inline;
-    }
     .wrapper{
     grid-template-columns: 2fr 200px;
     width: 100%;
-    margin: auto;
-    /* min-height: 300px; */
+    margin: 0 auto;
+    max-width: 2560px;
     grid-gap: 0.5em;
-    /* grid-auto-rows: minmax(100px, auto); */
     grid-template-rows: 2fr auto auto 50px;
     grid-template-areas: 
     "header header"
@@ -365,6 +353,7 @@ button:hover{
         grid-template-areas: 
         "brand navigation tools";
     }
+    
     .header2{
         padding-top: 40px;  
     }
@@ -387,18 +376,29 @@ button:hover{
         grid-column: 1 / span 1;
         grid-row: 2/ span 2;
     }
+
+    .advert{
+        grid-area: advert;
+    }
+    .advert{
+        display: contents;
+        display: inline;
+    }
     .advert{
     width: auto;
     height: 300px;
     }
 
     .body{
-        grid-gap:1em;
-        display:inline;
+        grid-gap: 1em;
+        display: inline;
         grid-template-columns: auto auto;
         grid-template-rows: auto;
         grid-template-areas: 
         "body1 body3";  
+    }
+    .body2{
+        display: none;
     }
     /* .body{
         grid-column: 1 / span 2;
