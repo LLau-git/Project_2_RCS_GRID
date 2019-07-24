@@ -380,7 +380,7 @@ button:hover{
         display: block;
     }
     .advert{
-    background: center no-repeat url(/images/download.jpg);
+    background: center no-repeat url(images/download.jpg);
     background-size: cover;
     }
 
