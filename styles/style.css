@@ -49,9 +49,9 @@ header {
     max-width: 414px;
     font-size: 1em;
     min-height: 300px;
-    grid-gap: 1em;
+    grid-gap: 0.5em;
     /* grid-auto-rows: minmax(100px, auto); */
-    grid-template-rows: 1fr auto auto auto auto 30px;
+    grid-template-rows: 1fr auto auto auto 30px;
     grid-template-areas: 
     "header"
     "hero"
@@ -60,7 +60,6 @@ header {
     /* "sidebar" */
     "footer";
 }
-
 .header{
     display: grid;
     grid-gap:0.5em;
@@ -110,8 +109,6 @@ header {
     
 }
 .header3 input[type=text]{
-    /* ar šo izdevās salabot 320px mob skatu
-    width: 160px; */
     width: auto;
     padding: 6px;
     margin-top: 8px;
@@ -155,13 +152,13 @@ header {
     display: none;
 }
 .strawberry-cake{
-    width: 320px;
+    /* width: 320px; */
+    width: 100%;
     object-fit: cover;
     height: auto;
     display: block;
     margin: auto;
 }
-
 .MC-img{
     width: 100%;
     height: 90px;
@@ -251,7 +248,7 @@ button:hover{
         min-width: 768px;
         max-width: 1024px;
         grid-gap: 0.5em;
-        grid-template-rows: auto auto auto 100px 50px;
+        /* grid-template-rows: auto auto auto auto 50px; */
         grid-template-areas: 
         "header"
         "hero"
@@ -308,9 +305,9 @@ button:hover{
     }
 
     .sidebar{
-        grid-gap:1em;
+        grid-gap:0.5em;
         grid-template-columns: auto;
-        grid-template-rows: 10px;
+        grid-template-rows: auto;
         grid-template-areas: 
         "sidebar";
     }
