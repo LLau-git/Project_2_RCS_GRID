@@ -1,18 +1,19 @@
 *{
-    box-sizing: border-box;
+    /* box-sizing: border-box; */
   }
 html{
     /* image from unsplash.com author Mae Mu @picoftasty */
     background: center no-repeat url(https://images.unsplash.com/photo-1552247064-3c20191acba6?ixlib=rb-1.2.1&q=80&fm=jpg&crop=entropy&cs=tinysrgb&w=1080&fit=max&ixid=eyJhcHBfaWQiOjF9);
-    background-size: 100% 100%;
+    /* background-size: 100% 100%; */
     background-size: cover;
     /* height: 300vh; */
+    background-attachment: fixed;
     color: rgb(1, 48, 48);
     /* opacity: 0.8; */
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-.header{
+header {
     grid-area: header;
 }
 
@@ -56,7 +57,7 @@ html{
     "hero"
     "advert"
     "body"
-    "sidebar"
+    /* "sidebar" */
     "footer";
 }
 
@@ -90,7 +91,6 @@ html{
     display: block;
     margin: 0 auto;
 }
-
 
 .nav{
     display: flex;
@@ -150,14 +150,12 @@ html{
 }
 .hero1{
     display: none;
-    /* display: hide; */
 }
 .advert{
     display: none;
 }
 .strawberry-cake{
     width: 320px;
-    /* width: auto; */
     object-fit: cover;
     height: auto;
     display: block;
@@ -166,7 +164,6 @@ html{
 
 .MC-img{
     width: 100%;
-    /* width: 320px; */
     height: 90px;
     display: block;
     margin: 0 auto; 
@@ -244,12 +241,8 @@ button:hover{
     padding: 0.5em;
 }
 
-/* Small devices (landscape phones, 576px and up) */
-/* @media (min-width: 576px) { ... } */
 
-/* Medium devices (landscape phones, 576px and up) */
-
-/* Large devices (desktops, 992px and up) */
+/* Med devices (desktops, 768px and up) */
 @media (min-width: 768px) { 
     .wrapper{
         grid-template-columns: auto;
@@ -335,19 +328,23 @@ button:hover{
 @media (min-width: 1200px) { 
 
     .wrapper{
-    grid-template-columns: 2fr 200px;
+    font-weight: 700;
+    font-size: 2em;
+    /* grid-template-columns: auto 200px; */
+    grid-template-columns: 70% 30%;
     width: 100%;
     margin: 0 auto;
     max-width: 2560px;
     grid-gap: 0.5em;
-    grid-template-rows: 2fr auto auto 50px;
+    /* grid-template-rows: auto auto auto 50px; */
+    /* grid-template-rows: 20% 30% 30% 20%; */
     grid-template-areas: 
     "header header"
     "hero advert"
     "body sidebar"
     "footer footer";
     }
-    .header{
+    /* .header{
         grid-gap:0.5em;
         grid-template-columns: auto auto auto;
         grid-template-rows: auto;
@@ -376,36 +373,27 @@ button:hover{
     .hero{
         grid-column: 1 / span 1;
         grid-row: 2/ span 2;
-    }
+    } */
 
     .advert{
         grid-area: advert;
     }
     .advert{
         display: contents;
-        display: inline;
+        display: block;
     }
     .advert{
-    width: auto;
-    height: 300px;
+    background: center no-repeat url(/images/download.jpg);
+    background-size: cover;
     }
 
-    .body{
-        grid-gap: 1em;
-        display: inline;
-        grid-template-columns: auto auto;
-        grid-template-rows: auto;
-        grid-template-areas: 
-        "body1 body3";  
-    }
     .body2{
         display: none;
     }
-    /* .body{
+    .body{
         grid-column: 1 / span 2;
         grid-row: 3 / 3;
-    } */
-
+    }
     .body1{
         grid-column: 1 / span 1;
         grid-row: 3 / 3;
@@ -413,5 +401,26 @@ button:hover{
     .body3{
         grid-column: 2 / span 2;
         grid-row: 3 / 3;
+    }
+
+    .body{
+        grid-gap: 1em;
+        grid-template-columns: 30% 62%;
+        grid-template-rows: auto;
+        grid-template-areas: 
+        "body1 body3";  
+    }
+    
+    button {
+        width: 17rem;
+        border-radius: 22px;
+        padding: 0.7rem 1.2rem;
+        font-size: 1.5em;
+        }
+    .sidebar{
+        display: block;
+        width: 100%;
+        margin-top: 2em;
+        background: #e4d5e7;
     }
 }
