@@ -402,7 +402,7 @@ button:hover{
     }
 
     .body{
-        grid-gap: 1em;
+        grid-gap: 0.5em;
         grid-template-columns: 30% 62%;
         grid-template-rows: auto;
         grid-template-areas: 
@@ -418,7 +418,7 @@ button:hover{
     .sidebar{
         display: block;
         width: 100%;
-        margin-top: 2em;
+        margin-top: 1em;
         background: #e4d5e7;
     }
 }
